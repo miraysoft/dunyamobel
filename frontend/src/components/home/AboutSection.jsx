@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="max-w-[1000px] mx-auto">
         {aboutText.paragraphs.map((paragraph, index) => (
           <p
-            key={index}
+            key={paragraph}
             className="text-gray-600 text-sm md:text-[15px] leading-relaxed mb-5 last:mb-0"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >

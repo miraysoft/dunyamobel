@@ -10,7 +10,7 @@ const MarqueeBanner = () => {
         <div className="marquee-content">
           {repeatedTexts.map((text, index) => (
             <span
-              key={index}
+              key={`${text}-${index}`}
               className="inline-block mx-8 text-[#1a1a1a] text-xs md:text-sm font-bold tracking-wider whitespace-nowrap"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
@@ -21,7 +21,7 @@ const MarqueeBanner = () => {
         <div className="marquee-content" aria-hidden="true">
           {repeatedTexts.map((text, index) => (
             <span
-              key={`dup-${index}`}
+              key={`dup-${text}-${index}`}
               className="inline-block mx-8 text-[#1a1a1a] text-xs md:text-sm font-bold tracking-wider whitespace-nowrap"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >

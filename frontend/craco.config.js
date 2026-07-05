@@ -21,12 +21,13 @@ function makeDevServerV5Compatible(devServerConfig) {
     ...compatibleConfig
   } = devServerConfig;
 
-  compatibleConfig.server =
-    typeof https === "object"
-      ? { type: "https", options: https }
-      : https
-        ? "https"
-        : "http";
+  if (typeof https === "object") {
+    compatibleConfig.server = { type: "https", options: https };
+  } else if (https) {
+    compatibleConfig.server = "https";
+  } else {
+    compatibleConfig.server = "http";
+  }
   compatibleConfig.headers = {
     ...compatibleConfig.headers,
     "Cross-Origin-Resource-Policy": "same-origin",

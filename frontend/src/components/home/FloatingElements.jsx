@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 const CookieBanner = () => {
@@ -65,13 +65,14 @@ const WhatsAppButton = () => {
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const handleScroll = useCallback(() => {
+    setIsVisible(window.scrollY > 400);
+  }, [setIsVisible]);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 400);
-    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

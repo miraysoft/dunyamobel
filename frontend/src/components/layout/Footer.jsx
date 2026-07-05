@@ -13,13 +13,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-5">
               <div className="relative">
-                <svg width="36" height="36" viewBox="0 0 60 60" fill="none">
-                  <rect x="20" y="30" width="20" height="25" rx="2" fill="#ffffff"/>
-                  <rect x="24" y="55" width="3" height="5" fill="#ffffff"/>
-                  <rect x="33" y="55" width="3" height="5" fill="#ffffff"/>
-                  <circle cx="30" cy="18" r="14" fill="#F7C948" opacity="0.9"/>
-                  <rect x="29" y="4" width="2" height="8" fill="#ffffff"/>
-                </svg>
+                <img
+                  src="https://dunyamobel.ch/wp-content/uploads/2021/08/logo.png"
+                  alt="DÜNYA MÖBELHAUS"
+                  className="w-9 h-9 object-contain"
+                />
               </div>
               <div className="leading-tight">
                 <div className="font-extrabold text-lg tracking-tight text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>DÜNYA</div>

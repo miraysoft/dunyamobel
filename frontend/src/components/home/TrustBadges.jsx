@@ -41,7 +41,7 @@ const TrustBadges = () => {
           <div className="brand-marquee">
             {[...brandNames, ...brandNames, ...brandNames].map((brand, index) => (
               <div
-                key={index}
+                key={`${brand}-${index}`}
                 className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center"
               >
                 <span
